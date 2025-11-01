@@ -22,7 +22,7 @@
 
   /* Shadows */
   --shd_SM: none;
-  --shd_MD: none;
+  --shd_MD: var(--backgroundColor_Dark) 0px 24px 50px 0px;
   --shd_LG: var(--backgroundColor_Dark) 0px 48px 100px 0px;
 
   /* Transition */
@@ -85,11 +85,10 @@ textarea
 }
 
 
-
 #sections-list {
   position: fixed;
-  width: 15%;
-  left: 0px;
+  /* width: 15%; */
+  left: 10%;
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 600;

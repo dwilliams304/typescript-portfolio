@@ -30,7 +30,7 @@ function CreateCard(data: Project, key: number | string): HTMLElement{
     element.innerHTML =
     `
         <div class="project-card-left">
-            <h3>${data.projectName}</h3>
+            <h3 class="fancy-hover-underline">${data.projectName}</h3>
             <p>${data.projectDescription}</p>
         </div>
         <div class="project-card-right">

@@ -45,12 +45,27 @@ section
 
 .project-card
 {
-    background-color: black;
+    background-color: var(--backgroundColor_Dark);
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: 2rem;
 }
+.project-card:hover
+{
+    cursor: pointer;
+    transform: translateY(-10px);
+    transition: all 200ms ease-in-out;
+    box-shadow: var(--shd_MD);
+}
+.project-card:hover h3
+{
+    transition: all 400ms ease-in-out;
+    background-image: linear-gradient(to right, var(--primaryColor), var(--primaryColor_Highlight) 10%);
+    color: transparent;
+    background-clip: text;
+}
+
 .project-card-left
 {
     display: flex;
