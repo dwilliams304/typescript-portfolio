@@ -54,10 +54,27 @@ header h1:hover {
   backdrop-filter: blur(10px);
   border-radius: 50px;
   border-bottom: 1px solid var(--primaryColor);
+  z-index: 100;
+  box-shadow: var(--shd_LG);
 }
 #customization-bar.inactive
 {
   display: none;
+}
+
+#customization-bar select 
+{
+  border: 1px solid var(--primaryColor);
+  border-radius: 12px;
+  background-color: var(--backgroundColor_Dark);
+  color: var(--textColor);
+  padding: 6px 8px;
+  font-size: 16px;
+}
+
+#customization-bar select option
+{
+  background-color: var(--backgroundColor_Dark);
 }
 
 .bar-header
