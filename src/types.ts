@@ -8,11 +8,11 @@ export type AboutInfo = {
 }
 
 export type Project = {
-    projectName: string;
-    projectImg: string;
-    techUsed: string[];
-    projectDescription: string;
-    links: [string, string];
+    readonly projectName: string;
+    readonly projectImg: string;
+    readonly techUsed: string[];
+    readonly projectDescription: string;
+    readonly links: [string, string];
 }
 
 export type CustomizationValue = string[] | "toggle";
