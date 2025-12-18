@@ -41,8 +41,8 @@ function CreateCard(data: Project, key: number | string): HTMLElement{
             <img src=${data.projectImg}
             />
             <div class="project-card-buttons">
-                <button class="secondary-btn">Demo</button>
-                <button class="secondary-btn">GitHub</button>
+                <button class="primary-btn">Demo</button>
+                <button class="primary-btn">GitHub</button>
             </div>
         </div>
     `;

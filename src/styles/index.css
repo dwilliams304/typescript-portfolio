@@ -25,6 +25,8 @@
   --shd_MD: var(--backgroundColor_Dark) 0px 24px 50px 0px;
   --shd_LG: var(--backgroundColor_Dark) 0px 48px 100px 0px;
 
+  --glow_SM: var(--primaryColor) 0px 0px 10px 0px;
+
   /* Transition */
   --trs_SHORT: all 100ms ease-in-out;
   --trs_MED: all 175ms ease-in-out;
@@ -123,25 +125,47 @@ button
 
 .primary-btn
 {
-  background-color: var(--primaryColor);
-  color: var(--backgroundColor_Dark);
+  background-color: var(--backgroundColor_Dark);
+  color: var(--primaryColor);
   transition: all 0.2s ease-in-out;
-}
+  position: relative;
+  z-index: 1;
+} 
+.primary-btn::before
+{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-color: var(--primaryColor);
+  /* border-bottom: 1px solid var(--primaryColor); */
+  transform: scaleX(0);
 
+  transition: transform 175ms ease;
+}
+.primary-btn:hover::before
+{
+  transform: scaleX(100%);
+}
 .primary-btn:hover
 {
-  color: var(--primaryColor);
-  background-color: var(--backgroundColor_Dark);
+  /* background-color: var(--primaryColor); */
+  color: var(--backgroundColor_Dark);
+  box-shadow: var(--glow_SM);
 }
 
 .secondary-btn
 {
-  background-color: var(--backgroundColor_Dark);
-  color: var(--primaryColor);
-  transition: all 0.2s ease-in-out;
-} 
-.secondary-btn:hover
-{
   background-color: var(--primaryColor);
   color: var(--backgroundColor_Dark);
+  transition: all 0.2s ease-in-out;
+}
+
+.secondary-btn:hover
+{
+  color: var(--primaryColor);
+  background-color: var(--backgroundColor_Dark);
 }
