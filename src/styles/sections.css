@@ -37,9 +37,10 @@ section
 /* Projects Section */
 #projects
 {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem 0;
+    display: grid;
+    /* flex-direction: column; */
+    grid-template-columns: auto auto;
+    gap: 2rem;
     margin: 0 auto;
 }
 
@@ -48,14 +49,17 @@ section
     background-color: var(--backgroundColor_Dark);
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    transform: translateY(0px);
+    /* width: 100%; */
     padding: 2rem;
+    gap: 18px;
+    transition: all 250ms ease-in-out;
 }
 .project-card:hover
 {
     cursor: pointer;
     transform: translateY(-10px);
-    transition: all 200ms ease-in-out;
+    
     box-shadow: var(--shd_MD);
 }
 .project-card:hover h3
@@ -71,6 +75,14 @@ section
     display: flex;
     flex-direction: column;
     gap: 14px;
+    position: relative;
+    border-right: 1px solid var(--primaryColor);
+}
+.project-card-left div
+{
+    /* align-self: flex-end; */
+    position: absolute;
+    bottom: 0;
 }
 .project-card h3{
     font-size: 28px;
@@ -84,13 +96,19 @@ section
     flex-direction: column;
     gap: 14px;
 }
-
-.project-card-buttons button
+.project-card img
 {
-    padding: 6px 12px;
+    width: 225px;
+    height: 225px;
+    object-fit: cover;
 }
 
-
+.project-card-buttons
+{
+    display: flex;
+    gap: 14px;
+    margin-top: 0.5rem;
+}
 
 /* Contact Section */
 #contact
@@ -102,7 +120,7 @@ form
     width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 22px;
     margin: 0 auto;
     padding: 4rem;
     box-shadow: var(--shd_LG);
@@ -110,10 +128,18 @@ form
 
 form h2
 {
+    margin-bottom: 2rem;
     font-size: 32px;
     text-align: center;
     text-transform: uppercase;
 }
+
+form button
+{
+    margin-top: 4rem;
+    /* background-color: var(--backgroundColor_Dark); */
+}
+
 
 .contact-item
 {
@@ -126,7 +152,6 @@ form h2
 .contact-item input, .contact-item textarea
 {
     padding: 14px 22px;
-    border-radius: 14px;
     border: 1px solid var(--primaryColor);
     background-color: var(--backgroundColor_Dark);
     color: var(--textColor);

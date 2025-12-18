@@ -32,13 +32,17 @@ function CreateCard(data: Project, key: number | string): HTMLElement{
         <div class="project-card-left">
             <h3 class="fancy-hover-underline">${data.projectName}</h3>
             <p>${data.projectDescription}</p>
+            <div>
+                <p><span class="txt-highlight-p-co">Tech Used:</span> React, TypeScript, TailwindCSS</p>
+                <p><span class="txt-highlight-p-co">Tags:</span> Website, React</p>
+            </div>
         </div>
         <div class="project-card-right">
             <img src=${data.projectImg}
             />
             <div class="project-card-buttons">
-                <button>GitHub</button>
-                <button>Demo</button>
+                <button class="secondary-btn">Demo</button>
+                <button class="secondary-btn">GitHub</button>
             </div>
         </div>
     `;
