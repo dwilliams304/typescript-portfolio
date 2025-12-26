@@ -169,3 +169,6 @@ button
   color: var(--primaryColor);
   background-color: var(--backgroundColor_Dark);
 }
+
+
+.mt-10 { margin-top: 10px; }

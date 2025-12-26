@@ -15,6 +15,7 @@ export function SectionsList(SwitchDisplayMode: () => void, sections: string[]){
     }
 
     const funButton = document.createElement("button");
+    funButton.classList.add("primary-btn", "mt-10");
     funButton.textContent = "Switch Modes";
     funButton.addEventListener("click", SwitchDisplayMode);
     list.appendChild(funButton);
