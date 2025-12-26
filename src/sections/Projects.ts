@@ -16,10 +16,7 @@ export function RenderProjects(projectsList: Project[]){
         return;
     }
 
-    projectsList.map((project, i) => {
-        const card = CreateCard(project, i);
-        section.appendChild(card);
-    });
+    projectsList.map((project, i) => section.appendChild(CreateCard(project, i)));
 }
 
 function CreateCard(data: Project, key: number | string): HTMLElement{
@@ -27,14 +24,14 @@ function CreateCard(data: Project, key: number | string): HTMLElement{
     element.classList.add("project-card")
     element.id = String(key);
 
+    
+
     element.innerHTML =
     `
         <div class="project-card-left">
             <h3 class="fancy-hover-underline">${data.projectName}</h3>
             <p>${data.projectDescription}</p>
-            <div>
-                <p><span class="txt-highlight-p-co">Tech Used:</span> React, TypeScript, TailwindCSS</p>
-                <p><span class="txt-highlight-p-co">Tags:</span> Website, React</p>
+            <div class="tags">
             </div>
         </div>
         <div class="project-card-right">
@@ -46,6 +43,16 @@ function CreateCard(data: Project, key: number | string): HTMLElement{
             </div>
         </div>
     `;
+
+    const tags = element.getElementsByClassName("tags")[0];
+    if(tags){
+        data.techUsed.map((tech) => {
+            const tag = document.createElement("span");
+            tag.classList.add("tech");
+            tag.textContent = " " + tech;
+            tags.appendChild(tag);
+        })
+    }
 
     return element;
 }

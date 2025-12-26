@@ -12,6 +12,11 @@ export function RerenderComponents(){
     ClearInnerHtml(sectionsList);
 }   
 
+export function RerenderComponent(componentId: string){
+    const component = document.getElementById(componentId);
+    ClearInnerHtml(component);
+}
+
 export function RerenderSections(){
     const about = GetSection("about");
     ClearInnerHtml(about);

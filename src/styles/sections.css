@@ -77,14 +77,15 @@ section
     flex-direction: column;
     gap: 14px;
     position: relative;
+    padding-right: 4px;
     border-right: 1px solid var(--primaryColor);
 }
 .project-card-left div
 {
-    /* align-self: flex-end; */
     position: absolute;
     bottom: 0;
 }
+
 .project-card h3{
     font-size: 28px;
     font-weight: 700;
@@ -109,6 +110,19 @@ section
     display: flex;
     gap: 14px;
     margin-top: 0.5rem;
+}
+.tags
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 6px;
+    align-items: center;
+}
+.tech
+{
+    border: 1px solid var(--primaryColor);
+    padding: 4px 12px;
+    border-radius: 10px;
 }
 
 /* Contact Section */
