@@ -1,9 +1,8 @@
-import type { ICustomOptions } from "../types";
-import { CustomizationBar } from "./CustomizationBar";
 import { InitHeader } from "./Header";
+import { SectionsList } from "./SectionsList";
 
 
-export function InitComponents(customizationOptions: ICustomOptions){
-    CustomizationBar(customizationOptions);
+export function InitComponents(SwitchDisplayMode: () => void){
     InitHeader();
+    SectionsList(SwitchDisplayMode, ["About", "Projects", "Contact"]);
 }
